@@ -1,0 +1,5 @@
+Matt's Boxing Gloves : the famous champion's gloves : what : 20000 : 100 : boxinggloves.jpg
+Matt's Tennis Racket : the racket that was used in his 10-0 winning streak : what : 1000 : 50 : tennisracket.jpg
+Jake's Golf Set : irons, wedges, putters, and balls included! : what : 500 : 5 : golfset.jpg
+Michael's Baseball Set : includes michael's autograph, baseball and bat : what : 40 : 1 : baseballset.jpg
+Steve's Lucky Bowling Ball : just the ball -- but it is a great collectable. 10x Bowling Champion : what : 50000 : 1000 : bowlingball.jpg

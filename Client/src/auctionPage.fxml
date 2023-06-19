@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #adcfd8;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControllerAuction">
+   <children>
+      <Label layoutX="452.0" layoutY="8.0" prefHeight="37.0" prefWidth="438.0" text="Wii Sports Auction Page">
+         <font>
+            <Font name="Bookman Old Style Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="logout_button" layoutX="22.0" layoutY="736.0" mnemonicParsing="false" onMouseClicked="#logOutAction" prefHeight="50.0" prefWidth="101.0" style="-fx-background-color: #26505c;" text="Log Out" textFill="WHITE" />
+      <Button fx:id="quit_button" layoutX="1152.0" layoutY="747.0" mnemonicParsing="false" onMouseClicked="#quitAction" prefHeight="39.0" prefWidth="114.0" style="-fx-background-color: #26505c;" text="Quit" textFill="WHITE" />
+      <Label layoutX="11.0" layoutY="192.0" text="Item:">
+         <font>
+            <Font name="Bookman Old Style" size="21.0" />
+         </font></Label>
+      <Label layoutX="11.0" layoutY="234.0" prefHeight="25.0" prefWidth="149.0" text="Bid Price:">
+         <font>
+            <Font name="Bookman Old Style" size="21.0" />
+         </font></Label>
+      <Label layoutX="63.0" layoutY="140.0" text="Bidding">
+         <font>
+            <Font name="Bookman Old Style Bold" size="30.0" />
+         </font>
+      </Label>
+      <TextField fx:id="bidonitem_field" layoutX="69.0" layoutY="192.0" prefHeight="25.0" prefWidth="195.0" />
+      <TextField fx:id="bidprice_textfield" layoutX="115.0" layoutY="234.0" prefHeight="25.0" prefWidth="149.0" />
+      <Label fx:id="welcome_label" layoutX="254.0" layoutY="56.0" prefHeight="50.0" prefWidth="758.0" text="Welcome">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="16.0" />
+         </font></Label>
+      <Button fx:id="makebid_button" layoutX="53.0" layoutY="273.0" mnemonicParsing="false" onMouseClicked="#makeBidOnAction" prefHeight="39.0" prefWidth="179.0" style="-fx-background-color: #26505c;" text="Make Bid" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style" size="18.0" />
+         </font></Button>
+      <Label layoutX="128.0" layoutY="750.0" prefHeight="23.0" prefWidth="232.0" text="Current Auction News:">
+         <font>
+            <Font name="Bookman Old Style Bold" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="auctionHistory_button" layoutX="25.0" layoutY="584.0" mnemonicParsing="false" onMouseClicked="#seeHistoryOnClicked" prefHeight="50.0" prefWidth="149.0" style="-fx-background-color: #26505c;" text="See History" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style" size="18.0" />
+         </font></Button>
+      <TextArea fx:id="auctionHistory_textArea" layoutX="25.0" layoutY="400.0" prefHeight="178.0" prefWidth="318.0" style="-fx-border-color: #7da5b1;" />
+      <Button fx:id="closeAuctionHistory_button" layoutX="189.0" layoutY="584.0" mnemonicParsing="false" onMouseClicked="#closeHistoryOnClicked" prefHeight="50.0" prefWidth="143.0" style="-fx-background-color: #26505c;" text="Close History" textFill="WHITE">
+         <font>
+            <Font name="Bookman Old Style" size="18.0" />
+         </font></Button>
+      <ComboBox fx:id="itemList_combobox" layoutX="1023.0" layoutY="56.0" onAction="#comboSetOnAction" prefHeight="39.0" prefWidth="225.0" promptText="Available Item List " style="-fx-background-color: #38788a;" />
+      <Label fx:id="itemnameTITLE_label" layoutX="303.0" layoutY="188.0" prefHeight="27.0" prefWidth="107.0" text="Item Name:">
+         <font>
+            <Font name="Bookman Old Style Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentbidpriceTITLE_label" layoutX="300.0" layoutY="221.0" prefHeight="26.0" prefWidth="186.0" text="Current Bid Price:">
+         <font>
+            <Font name="Bookman Old Style Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="itemname_label" layoutX="410.0" layoutY="192.0" prefHeight="19.0" prefWidth="255.0" text="Item">
+         <font>
+            <Font name="Bookman Old Style" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentBidPrice_label" layoutX="456.0" layoutY="225.0" text="currentbidprice">
+         <font>
+            <Font name="Bookman Old Style" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="announcements_label" layoutX="360.0" layoutY="752.0" prefHeight="19.0" prefWidth="785.0" text="news">
+         <font>
+            <Font name="Bookman Old Style Bold Italic" size="12.0" />
+         </font></Label>
+      <Label fx:id="sellingbidpriceTITLE_label" layoutX="300.0" layoutY="258.0" prefHeight="26.0" prefWidth="149.0" text="Selling Bid Price:">
+         <font>
+            <Font name="Bookman Old Style Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="sellingbidprice_label" layoutX="452.0" layoutY="262.0" text="sellingbidprice">
+         <font>
+            <Font name="Bookman Old Style" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="solditemmessage_label" layoutX="357.0" layoutY="440.0" prefHeight="26.0" prefWidth="654.0" text="solditemmessage">
+         <font>
+            <Font name="Bookman Old Style" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="highestbiddermessage_label" layoutX="357.0" layoutY="466.0" prefHeight="26.0" prefWidth="667.0" text="highestbiddermessage">
+         <font>
+            <Font name="Bookman Old Style" size="16.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="soldlist_combobox" layoutX="1016.0" layoutY="489.0" onAction="#soldlistsetOnAction" prefHeight="39.0" prefWidth="232.0" promptText="Auction Closed Items" style="-fx-background-color: #38788a;" />
+      <Label layoutX="1064.0" layoutY="17.0" text="Item List">
+         <font>
+            <Font name="Bookman Old Style Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="1017.0" layoutY="447.0" text="Sold Items List">
+         <font>
+            <Font name="Bookman Old Style Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="solditeminformation_label" layoutX="357.0" layoutY="402.0" prefHeight="37.0" prefWidth="384.0" text="Sold Item Information">
+         <font>
+            <Font name="Bookman Old Style Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="iteminformation_label" layoutX="300.0" layoutY="151.0" prefHeight="37.0" prefWidth="281.0" text="Item Information">
+         <font>
+            <Font name="Bookman Old Style Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="descriptionTITLE_label" layoutX="300.0" layoutY="292.0" prefHeight="26.0" prefWidth="149.0" text="Description:">
+         <font>
+            <Font name="Bookman Old Style Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="description_label" layoutX="410.0" layoutY="296.0" prefHeight="19.0" prefWidth="776.0" text="description">
+         <font>
+            <Font name="Bookman Old Style" size="16.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="237.0" layoutX="674.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="120.0" fitWidth="154.0" layoutX="61.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@happymiis.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="207.0" fitWidth="384.0" layoutX="424.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@wiisportsmainpage.jpg" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <ColorAdjust contrast="-0.02" saturation="-0.38" />
+   </effect>
+</AnchorPane>
